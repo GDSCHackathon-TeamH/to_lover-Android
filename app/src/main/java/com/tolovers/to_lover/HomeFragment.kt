@@ -17,6 +17,15 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = ActivityHomeBinding.inflate(inflater, container, false)
 
+        val activityHome  = arguments?.getString("TodoText")
+        binding.homeTodoBtn.text = activityHome
+
+        binding.homeTodoBtn.setOnClickListener {
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, TodoingFragment())
+                .commitAllowingStateLoss()
+        }
+
         return binding.root
     }
 

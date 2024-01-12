@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.chatFragment -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, ChatFragment())
+                        .replace(R.id.main_frm, HomeFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
