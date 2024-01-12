@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="3.5dp">
+    
+    <TextView
+        android:id="@+id/item_diary_date_tv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/background_maincolor_btn"
+        android:text="YYYY.MM.DD"
+        android:paddingStart="19dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/item_diary_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="보러가기 >>"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@id/item_diary_date_tv"
+        app:layout_constraintTop_toTopOf="@id/item_diary_date_tv"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

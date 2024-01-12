@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="always"
+        android:enabled="true"
+        tools:ignore="AlwaysShowAction"
+        android:title="" />
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/ic_message"
+        app:showAsAction="always"
+        android:title="" />
+    <item
+        android:id="@+id/recordFragment"
+        android:icon="@drawable/ic_edit"
+        app:showAsAction="always"
+        android:title="" />
+    <item
+        android:id="@+id/communityFragment"
+        android:icon="@drawable/ic_community"
+        app:showAsAction="always"
+        android:title="" />
+</menu>
