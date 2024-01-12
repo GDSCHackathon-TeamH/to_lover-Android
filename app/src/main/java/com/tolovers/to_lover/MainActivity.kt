@@ -1,6 +1,8 @@
 package com.tolovers.to_lover
 
 import android.os.Bundle
+import android.util.Log
+import com.kakao.sdk.common.util.Utility
 import androidx.appcompat.app.AppCompatActivity
 import com.tolovers.to_lover.databinding.ActivityMainBinding
 
@@ -8,6 +10,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initBottomNavigation()
@@ -52,5 +56,6 @@ class MainActivity : AppCompatActivity() {
             }
             false
         }
+
     }
 }
