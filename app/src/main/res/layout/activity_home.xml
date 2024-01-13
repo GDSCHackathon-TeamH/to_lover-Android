@@ -15,23 +15,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/home_todo_btn"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginBottom="10dp"
-        android:paddingStart="22dp"
-        android:background="@drawable/background_highlight_btn"
-        android:drawableLeft="@drawable/ic_edit"
-        android:textColor="@color/white"
-        android:text="   5년 후의 내가 되어 오늘의 나에게 편지 쓰기"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:gravity="center_vertical"
-        android:visibility="invisible"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
