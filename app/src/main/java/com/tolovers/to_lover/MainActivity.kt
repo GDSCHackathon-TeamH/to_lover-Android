@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.chatFragment -> {
                     startActivity(Intent(this, ChoiceLoverActivitiy::class.java))
+                
                     return@setOnItemSelectedListener true
                 }
 

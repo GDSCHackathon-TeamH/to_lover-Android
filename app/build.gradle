@@ -6,6 +6,10 @@ plugins {
 android {
     compileSdk 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId "com.tolovers.to_lover"
         minSdk 23
@@ -45,8 +49,16 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-
     implementation "com.kakao.sdk:v2-user:2.19.0" // 카카오 로그인
+
+    //Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
+
+    //Viewpager2
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    //Gson
+    implementation("com.google.code.gson:gson:2.8.7")
 }
