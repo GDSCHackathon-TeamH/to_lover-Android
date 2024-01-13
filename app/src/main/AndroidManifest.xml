@@ -36,6 +36,7 @@
         <activity android:name=".SignupActivity"/>
         <activity android:name=".ChoiceDetailActivity"/>
         <activity android:name=".ChoiceLoverActivitiy"/>
+        <activity android:name=".ChatActivity"/>
 
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
@@ -50,9 +51,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ChatFragment" />
-        <activity android:name=".RecordFragment" />
-        <activity android:name=".CommuFragment" />
 
     </application>
 
