@@ -1,5 +1,6 @@
 package com.tolovers.to_lover
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -50,26 +51,42 @@ class TodoFragment : Fragment() {
         return binding.root
     }
 
-    private fun handleButtonClick(buttonText: String) {
+    private fun handleButtonClick(todoText: String) {
         val bundle = Bundle()
-        bundle.putString("buttonText", buttonText)
+        bundle.putString("todoText", todoText)
 
         val activityHome = HomeFragment()
         val fragmentRecordTodoIng = TodoingFragment()
         val fragmentRecordTodoFin = TodofinFragment()
         val fragmentRecordResult = ResultFragment()
+
         activityHome.arguments = bundle
         fragmentRecordTodoIng.arguments = bundle
         fragmentRecordTodoFin.arguments = bundle
         fragmentRecordResult.arguments = bundle
 
         val fragmentManager = requireActivity().supportFragmentManager
+
         val transaction = fragmentManager.beginTransaction()
         transaction.replace(R.id.main_frm, activityHome)
-        transaction.replace(R.id.main_frm, fragmentRecordTodoIng)
-        transaction.replace(R.id.main_frm, fragmentRecordTodoFin)
-        transaction.replace(R.id.main_frm, fragmentRecordResult)
         transaction.addToBackStack(null)
         transaction.commit()
+
+        // 다음 Fragment를 추가하기 위해 새로운 트랜잭션 시작
+        val newTransaction = fragmentManager.beginTransaction()
+        newTransaction.replace(R.id.main_frm, fragmentRecordTodoIng)
+        newTransaction.addToBackStack(null)
+        newTransaction.commit()
+
+        // 이하 동일하게 나머지 Fragment들 추가
+        val thirdTransaction = fragmentManager.beginTransaction()
+        thirdTransaction.replace(R.id.main_frm, fragmentRecordTodoFin)
+        thirdTransaction.addToBackStack(null)
+        thirdTransaction.commit()
+
+        val fourthTransaction = fragmentManager.beginTransaction()
+        fourthTransaction.replace(R.id.main_frm, fragmentRecordResult)
+        fourthTransaction.addToBackStack(null)
+        fourthTransaction.commit()
     }
 }

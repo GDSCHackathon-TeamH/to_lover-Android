@@ -5,13 +5,299 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background">
 
+    <ImageButton
+        android:id="@+id/commu_back_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_back"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <TextView
+        android:id="@+id/commu_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Community Screen"
+        android:layout_marginTop="12dp"
+        android:text="커뮤니티"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/commu_subtitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이별 커뮤니티"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commu_title_tv" />
+    
+    <LinearLayout
+        android:id="@+id/commu_animal_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/commu_btn"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commu_subtitle_tv">
+
+        <LinearLayout
+            android:id="@+id/commu_animal_ver_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/commu_animal_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="반려동물과의 이별"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="13dp" />
+
+            <TextView
+                android:id="@+id/commu_animal_tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#반려동물  #이별"
+                android:textSize="12sp"
+                android:textColor="@color/gray1"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/commu_animal_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보러가기 >>"
+            android:textSize="12sp"
+            android:textColor="@color/gray1"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="189dp"
+            android:layout_marginTop="33dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/commu_family_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/commu_btn"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commu_animal_ll">
+
+        <LinearLayout
+            android:id="@+id/commu_family_ver_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/commu_family_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가족과의 이별"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="13dp" />
+
+            <TextView
+                android:id="@+id/commu_family_tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#가족  #이별"
+                android:textSize="12sp"
+                android:textColor="@color/gray1"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/commu_family_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보러가기 >>"
+            android:textSize="12sp"
+            android:textColor="@color/gray1"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="33dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/commu_gfbf_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/commu_btn"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commu_family_ll">
+
+        <LinearLayout
+            android:id="@+id/commu_gfbf_ver_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/commu_gfbf_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="연인과의 이별"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="13dp" />
+
+            <TextView
+                android:id="@+id/commu_gfbf_tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#연인  #이성  #이별"
+                android:textSize="12sp"
+                android:textColor="@color/gray1"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/commu_gfbf_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보러가기 >>"
+            android:textSize="12sp"
+            android:textColor="@color/gray1"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="175dp"
+            android:layout_marginTop="33dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/commu_thing_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/commu_btn"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commu_gfbf_ll">
+
+        <LinearLayout
+            android:id="@+id/commu_thing_ver_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/commu_thing_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="애착품과의 이별"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="13dp" />
+
+            <TextView
+                android:id="@+id/commu_thing_tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#물건  #이별"
+                android:textSize="12sp"
+                android:textColor="@color/gray1"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/commu_thing_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보러가기 >>"
+            android:textSize="12sp"
+            android:textColor="@color/gray1"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="197dp"
+            android:layout_marginTop="33dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/commu_friend_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/commu_btn"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commu_thing_ll">
+
+        <LinearLayout
+            android:id="@+id/commu_friend_ver_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/commu_friend_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="친구와의 이별"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="13dp" />
+
+            <TextView
+                android:id="@+id/commu_friend_tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#손절  #이별"
+                android:textSize="12sp"
+                android:textColor="@color/gray1"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/commu_friend_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보러가기 >>"
+            android:textSize="12sp"
+            android:textColor="@color/gray1"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="33dp"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

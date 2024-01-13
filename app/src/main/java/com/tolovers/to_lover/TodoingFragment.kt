@@ -1,5 +1,6 @@
 package com.tolovers.to_lover
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,8 +18,8 @@ class TodoingFragment : Fragment() {
     ): View? {
         binding = FragmentRecordTodoIngBinding.inflate(inflater, container, false)
 
-        val fragmentRecordTodoIng = arguments?.getString("buttonText")
-        binding.todoIngActionTv.text = fragmentRecordTodoIng
+        val todoText = arguments?.getString("todoText")
+        binding.todoIngActionTv.text = todoText
 
         binding.todoIngBackBtn.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
