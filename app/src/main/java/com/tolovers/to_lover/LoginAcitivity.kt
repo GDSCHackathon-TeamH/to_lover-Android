@@ -79,7 +79,6 @@ class LoginAcitivity : AppCompatActivity() {
                     val result: UserRes? = response.body()
                     Log.d("LOGIN", "onResponse 성공: " + result?.toString())
                     checkSign(result)
-
                 }else{
                     Log.d("LOGIN", "onResponse 실패")
                 }
@@ -95,7 +94,6 @@ class LoginAcitivity : AppCompatActivity() {
             goSignup()
         } else {
             GlobalApplication.spf.Jwt = userRes?.result?.accessJwt
-            Log.d("LOGIN", GlobalApplication.spf.Jwt.toString())
             goMain()
         }
 
