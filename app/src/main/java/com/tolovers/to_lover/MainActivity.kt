@@ -1,5 +1,6 @@
 package com.tolovers.to_lover
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import com.kakao.sdk.common.util.Utility
@@ -34,9 +35,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.chatFragment -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, ChatFragment())
-                        .commitAllowingStateLoss()
+                    startActivity(Intent(this, ChoiceLoverActivitiy::class.java))
                     return@setOnItemSelectedListener true
                 }
 
